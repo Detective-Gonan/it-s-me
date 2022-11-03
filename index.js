@@ -42,14 +42,3 @@ typing();
   };
   typing();
 }
-
-function scrollGo() {
-  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-} //화면 최상단으로 이동
-
-lists.onclick = (event) => {
-  // 첫번째 리스트 클릭 시
-  event.preventDefault();
-  window.scrollTo({ top: 1200, left: 0, behavior: "smooth" });
-}; // top에서 835px만큼 아래로 이동
-// left는 좌우 이동이기에 주지 않음

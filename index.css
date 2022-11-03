@@ -3,10 +3,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 h1,
 button {
   margin: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 button {
   -webkit-appearance: none;
