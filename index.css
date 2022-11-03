@@ -1,0 +1,75 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+button {
+  margin: 0;
+}
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#mainimg {
+  background-image: url(image/universe.jpg);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.cutline {
+  margin-top: 215px;
+  border: 0.1px solid white;
+}
+#content {
+  color: white;
+  font-size: 70px;
+}
+#content .iAm {
+  margin-top: 100px;
+  text-align: left;
+  margin-left: 100px;
+}
+#content .me {
+  text-align: right;
+  margin-right: 100px;
+}
+/* button style */
+#content #go {
+  font-size: 20px;
+  text-decoration: none;
+  border: 3px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  margin: 0 50%;
+
+  margin-top: 300px;
+}
+/* up버튼2 */
+.upto {
+  padding: 0px 25px;
+  position: absolute;
+  margin: 0;
+  top: 570px;
+  left: 800px;
+}
+/* .up:hover {
+  background-color: gold;
+} */
+/* resume */
+.resume {
+  border: 10px solid rgb(160, 160, 160);
+  background-color: white;
+  border-radius: 100px;
+  width: 1200px;
+  height: 900px;
+  margin: 200px auto 10px;
+}
