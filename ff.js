@@ -19,7 +19,7 @@ draw(){
 animate(){
 
 
-    
+
 }
 }
 
@@ -31,7 +31,7 @@ function render(){
 
 }
 
-window.addEventListener('resize'.()=>init())
+window.addEventListener('resize'.()=>init());
 
 init();
 render();
