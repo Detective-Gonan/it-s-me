@@ -20,6 +20,10 @@ button {
 }
 html {
   scroll-behavior: smooth;
+  background-image: url(image/universe.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 @keyframes bounce {
   100% {
@@ -27,11 +31,6 @@ html {
   }
 }
 #mainimg {
-  background-image: url(image/universe.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   width: 100vw;
   height: 100vh;
 }
@@ -127,23 +126,26 @@ html {
 .front,
 .back {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 80%;
   border-radius: 1vw;
   overflow: hidden;
   backface-visibility: hidden;
 }
 
 .front {
-  font-size: 0.5em;
+  font-size: 0.4em;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: #e0ded7;
 }
 
 .back {
   transform: rotateY(180deg);
+  font-size: 0.4em;
+  text-align: center;
   background-color: #e0ded7;
   background-image: repeating-linear-gradient(
     0deg,
@@ -153,6 +155,10 @@ html {
     #ffffff00 67%
   );
   background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 @media screen and (orientation: portrait) {
