@@ -79,11 +79,15 @@ a {
 }
 /* up버튼2 */
 .upto {
-  padding: 0px 25px;
-  position: absolute;
-  margin: 0;
-  top: 570px;
-  left: 800px;
+  display: flex;
+  margin-top: 80px;
+  margin-left: 90%;
+  position: fixed;
+  font-size: 25px;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 /* resume */
@@ -92,7 +96,7 @@ a {
 }
 .main-content-1 {
   width: 100%;
-  height: 500vh;
+  height: 300vh;
 }
 
 .sticky {
@@ -104,7 +108,6 @@ a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: 400px;
 }
 
 .sticky-background {
@@ -118,8 +121,8 @@ a {
 
 .card-frame {
   position: absolute;
-  width: 95vw;
-  height: 30vw;
+  width: 85vw;
+  height: 25vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -200,4 +203,20 @@ a {
   border-radius: 100px;
   height: 700px;
   margin: 200px auto 100px;
+}
+/* 내이미지 */
+.infobox {
+  display: flex;
+  margin: auto;
+  float: auto;
+}
+.myimg img {
+  width: 100px;
+  height: auto;
+  float: left;
+}
+.infoMe {
+  width: 200px;
+  height: 200px;
+  background-color: black;
 }

@@ -11,6 +11,12 @@ const letters2 = ["디자인속에 다양한 기능들을,"];
 const letters3 = ["접목시키고 싶은 프론트엔드,"];
 const letters4 = ["웹개발자 석지훈입니다."];
 
+// 버튼 클릭 시 맨 위로 이동
+const $upto = document.querySelector(".upto");
+$upto.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 // 글자 입력 속도
 const speed = 100;
 // 현재 지정된 글자
@@ -168,4 +174,26 @@ window.addEventListener("resize", () => {
   cardFlipOnScroll.init();
 });
 
+const durationScrollTo = (y, duration = 500) => {
+  const stepY = (y - window.scrollY) / duration;
+
+  const currentY = window.scrollY;
+
+  const startTime = new Date().getTime();
+
+  const scrollInterval = setInterval(() => {
+    const now = new Date().getTime() - startTime;
+
+    window.scrollTo({ top: currentY + stepY * now });
+
+    if (duration <= now) {
+      clearInterval(scrollInterval);
+    }
+  }, 1);
+};
+
 // 버튼 클릭시 원하는 곳으로 스크롤 이동!
+const $button = document.querySelector(".button");
+$button.addEventListener("click", () => {
+  durationScrollTo(1200, 500);
+});
