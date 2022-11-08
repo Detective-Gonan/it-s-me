@@ -24,7 +24,7 @@ body {
   color: #2f2f2f;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; 
   background-image: url(image/universe.jpg);
   background-repeat: no-repeat;
   background-position: center;
