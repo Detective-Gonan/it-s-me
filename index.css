@@ -3,6 +3,7 @@
   font-family: "free";
   src: url(EF_Diary.ttf) format(truetype);
 }
+/* 전체기능 */
 html,
 body {
   margin: 0;
@@ -10,6 +11,7 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+/* 스크롤 숨기기! */
 html::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
@@ -28,6 +30,23 @@ html {
   background-position: center;
   background-attachment: fixed;
 }
+/* 타이핑 커서 기능! */
+h1::after {
+  content: "";
+  margin-left: 0.6rem;
+  border-right: 2px solid rgb(255, 255, 255);
+  animation: cursor 0.9s infinite steps(2);
+}
+
+@keyframes cursor {
+  from {
+    border-right: 3px solid #222;
+  }
+  to {
+    border-right: 3px solid rgb(255, 255, 255);
+  }
+}
+
 @keyframes bounce {
   100% {
     transform: translateY(-20%);
@@ -285,58 +304,54 @@ a {
   border-radius: 16px !important;
 }
 .progress {
-  background: rgba(202, 35, 35, 0.1);
+  background: rgba(0, 0, 0, 0.281);
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
   position: relative;
-  padding: 0 5px;
   display: flex;
-  height: 40px;
+  height: 30px;
   width: 500px;
+  margin-left: 3px;
 }
 
 .progress-value {
-  animation: load3 3s normal forwards;
   box-shadow: 0 10px 40px -10px black;
   border-radius: 100px;
-  background: rgb(196, 36, 36);
+  background: rgb(27, 15, 15);
   height: 30px;
   width: 0;
 }
-#child1 {
-  animation: load1 3s normal forwards;
-}
-#child2 {
-  animation: load2 3s normal forwards;
-}
-#child3 {
-  animation: load3 3s normal forwards;
-}
 
 @keyframes load1 {
-  0% {
+  from {
     width: 0;
+    opacity: 0;
   }
-  100% {
+  to {
     width: 80%;
+    opacity: 1;
   }
 }
 @keyframes load2 {
-  0% {
+  from {
     width: 0;
+    opacity: 0;
   }
-  100% {
+  to {
     width: 70%;
+    opacity: 1;
   }
 }
 
 @keyframes load3 {
-  0% {
+  from {
+    opacity: 0;
     width: 0;
   }
-  100% {
+  to {
     width: 20%;
+    opacity: 1;
   }
 }
 .per {
