@@ -59,7 +59,7 @@ typing();
   typing(i);
 }
 
-// 넘기기
+// 카드 스크롤!
 class CardFlipOnScroll {
   constructor(wrapper, sticky) {
     this.wrapper = wrapper;
