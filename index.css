@@ -13,10 +13,39 @@ body {
   font-family: "Titan One";
   color: #2f2f2f;
   scroll-behavior: smooth;
-  background-image: url(image/universe.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #111, #0e0f19);
+}
+/* 배경설정! */
+
+/* 별을 감싼 부모 */
+.sky {
+  width: 100vw;
+  height: 100vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveStar 240s linear infinite;
+}
+
+/* 별 */
+.sky .star {
+  fill: #fff;
+  stroke: none;
+  stroke-width: 0;
+}
+
+/* 별 이동효과 */
+@keyframes moveStar {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 /* 스크롤 숨기기! */
 html::-webkit-scrollbar {
@@ -83,7 +112,9 @@ a {
   text-align: center;
   width: 30px;
   margin-top: 300px;
+  position: relative;
 }
+
 /* 최상단으로 이동하는 up버튼 */
 .upto {
   display: flex;
@@ -281,7 +312,7 @@ a {
 }
 /* 퍼센트 설정 */
 .progress {
-  background: rgba(0, 0, 0, 0.281);
+  background: rgba(248, 245, 78, 0.281);
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
@@ -293,9 +324,9 @@ a {
 }
 
 .progress-value {
-  box-shadow: 0 10px 40px -10px black;
+  box-shadow: 0 10px 40px -10px rgba(255, 255, 255, 0.712);
   border-radius: 100px;
-  background: rgb(27, 15, 15);
+  background: rgb(255, 255, 255);
   height: 30px;
   width: 0;
 }
@@ -307,7 +338,7 @@ a {
   background-color: #f1f1f1;
 }
 .w3-progressbar {
-  background-color: #000000;
+  background-color: #ffffff;
   height: 100%;
   position: absolute;
   line-height: inherit;
