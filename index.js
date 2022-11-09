@@ -43,12 +43,14 @@ window.onload = () => {
 // 텍스트요소
 const $iAm = document.querySelector(".iAm");
 const $1 = document.querySelector(".me");
+const $ifnoTitle = document.querySelector(".ifnoTitle");
 
 // 텍스트
 const letters = ["Seok Ji hoon"];
 const letters1 = [
   "숫자로된 컴퓨터 언어속에서 디자인을,\n디자인속에 다양한 기능들을,\n접목시키고 싶은 프론트엔드\n 웹개발자 석지훈입니다.",
 ];
+const letters2 = ["왜 개발자가 되고싶은가?"];
 // 줄바꿈 치환 함수
 const changeLineBreak = (letter) => {
   return letter.map((text) => (text === "\n" ? "<br>" : text));
@@ -98,6 +100,39 @@ typing();
     await wait(800);
   };
   typing(i);
+}
+
+//ifnoTitle 타이핑 기능
+{
+  function wait(ms) {
+    return new Promise((res) => setTimeout(res, ms));
+  }
+
+  const typing = async () => {
+    const letter = changeLineBreak(letters2[i].split(""));
+
+    while (letter.length) {
+      await wait(speed);
+      $ifnoTitle.innerHTML += letter.shift();
+    }
+    await wait(800);
+  };
+  typing(i);
+}
+//info 기능
+{
+  //스크롤 위치지정 애니메이션
+  const $ifnoTitle = document.querySelector(".myself");
+  window.addEventListener("scroll", function () {
+    let value = this.window.scrollY;
+    if (value > 3000) {
+      $ifnoTitle.style.animation = "full 3s normal forwards";
+    } else if (4000 > value) {
+      $ifnoTitle.style.animation = "none";
+    } else {
+      $ifnoTitle.style.animation = "none";
+    }
+  });
 }
 
 // 카드 스크롤!
@@ -199,7 +234,6 @@ let $load2 = document.querySelector("#child2");
 let $load3 = document.querySelector("#child3");
 window.addEventListener("scroll", function () {
   let value = this.window.scrollY;
-  console.log("scrollY", value);
   if (value > 4000) {
     $load1.style.animation = "load1 3s normal forwards";
     $load2.style.animation = "load2 3s normal forwards";

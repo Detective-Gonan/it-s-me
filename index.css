@@ -237,37 +237,33 @@ a {
 /* 내소개 페이지 */
 .myself {
   width: 900px;
-  background-color: white;
-  border: 1px solid burlywood;
-  border-radius: 70px;
   height: 700px;
   margin: 200px auto 100px;
   display: flex;
+  position: relative;
 }
 
 .infobox {
   margin: auto;
 }
-.info1 {
-  float: left;
-}
 
 .myimg img {
-  display: flex;
   width: 100px;
-  margin-top: 10px;
+  margin-left: 200px;
+}
+.ifnoTitle {
+  width: 600px;
+  color: white;
+  font-size: 30px;
+  float: right;
+  padding-top: 70px;
 }
 .infoMe {
-  width: 400px;
-  height: 200px;
-  background-color: black;
+  width: 900px;
+  height: 500px;
+  background-color: white;
   border-radius: 50px;
-  float: left;
   margin-top: 10px;
-}
-/* 왼쪽 clear를 통한 2/2배치 */
-.info1:nth-child(3) {
-  clear: left;
 }
 
 /* 홀수 자식태그만 적용! */
@@ -276,7 +272,6 @@ a {
 }
 /* 나의 stack bar설정 */
 .stackMain {
-  margin-left: 20%;
   padding-top: 70px;
 }
 .myStack {
@@ -313,13 +308,14 @@ a {
 /* 퍼센트 설정 */
 .progress {
   background: rgba(248, 245, 78, 0.281);
+  
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
   position: relative;
   display: flex;
   height: 30px;
-  width: 500px;
+  width: 600px;
   margin-left: 3px;
 }
 
@@ -380,4 +376,13 @@ a {
 }
 .per {
   margin-right: 30px;
+}
+
+@keyframes full {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
