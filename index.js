@@ -43,14 +43,14 @@ window.onload = () => {
 // 텍스트요소
 const $iAm = document.querySelector(".iAm");
 const $1 = document.querySelector(".me");
-const $ifnoTitle = document.querySelector(".ifnoTitle");
 
 // 텍스트
 const letters = ["Seok Ji hoon"];
 const letters1 = [
   "숫자로된 컴퓨터 언어속에서 디자인을,\n디자인속에 다양한 기능들을,\n접목시키고 싶은 프론트엔드\n 웹개발자 석지훈입니다.",
 ];
-const letters2 = ["왜 개발자가 되고싶은가?"];
+const letters3 = ["왜 개발자가 되고싶은가?"];
+const letters2 = ["ABOUT ME??"];
 // 줄바꿈 치환 함수
 const changeLineBreak = (letter) => {
   return letter.map((text) => (text === "\n" ? "<br>" : text));
@@ -101,19 +101,35 @@ typing();
   };
   typing(i);
 }
-
 //ifnoTitle 타이핑 기능
 {
+  const $ifnoTitle = document.querySelector(".ifnoTitle");
   function wait(ms) {
     return new Promise((res) => setTimeout(res, ms));
   }
 
   const typing = async () => {
     const letter = changeLineBreak(letters2[i].split(""));
-
     while (letter.length) {
       await wait(speed);
       $ifnoTitle.innerHTML += letter.shift();
+    }
+    await wait(800);
+  };
+  typing(i);
+}
+//ifnoTitle 타이핑 기능
+{
+  const $ifnoTitle2 = document.querySelector(".ifnoTitle2");
+  function wait(ms) {
+    return new Promise((res) => setTimeout(res, ms));
+  }
+
+  const typing = async () => {
+    const letter = changeLineBreak(letters3[i].split(""));
+    while (letter.length) {
+      await wait(speed);
+      $ifnoTitle2.innerHTML += letter.shift();
     }
     await wait(800);
   };

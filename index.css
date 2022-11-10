@@ -251,6 +251,7 @@ a {
   width: 100px;
   margin-left: 200px;
 }
+
 .ifnoTitle {
   width: 600px;
   color: white;
@@ -258,12 +259,27 @@ a {
   float: right;
   padding-top: 70px;
 }
+.ifnoTitle2 {
+  width: 600px;
+  color: white;
+  font-size: 30px;
+  float: right;
+  padding-top: 70px;
+  margin-right: 70px;
+}
 .infoMe {
   width: 900px;
-  height: 500px;
+  height: 150px;
   background-color: white;
   border-radius: 50px;
   margin-top: 10px;
+  font-size: 18px;
+  padding: 60px;
+}
+#infoMe1 {
+  width: 400px;
+  margin: 0 auto;
+  height: 70px;
 }
 
 /* 홀수 자식태그만 적용! */
@@ -308,7 +324,7 @@ a {
 /* 퍼센트 설정 */
 .progress {
   background: rgba(248, 245, 78, 0.281);
-  
+
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
@@ -349,7 +365,7 @@ a {
     opacity: 0;
   }
   to {
-    width: 80%;
+    width: 70%;
     opacity: 1;
   }
 }
@@ -359,7 +375,7 @@ a {
     opacity: 0;
   }
   to {
-    width: 70%;
+    width: 80%;
     opacity: 1;
   }
 }
